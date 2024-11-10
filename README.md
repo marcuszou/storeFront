@@ -4,10 +4,9 @@
 
 ## Tech Stack
 
-1. Python: 3.11.10 (macOS Sonoma and Ubuntu 24.04)
-2. Django: 5.1.2
+1. Python: 3.12.7 (download the installer for macOS Sonoma while Ubuntu 24.04 has python 3.12.6)
+2. Django: 5.1.3
 
-Ubuntu 24.04 bears Python 3.12.6, and it's okay to use Python 3.12 to run this project.
 In case of someones wanting to have Python 3.11 in Ubuntu 24.04, here is the How-to:
 
 ```shell
@@ -16,6 +15,18 @@ sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt update -y
 sudo apt install python3.11
 ```
+
+or install python3.11 and pip3.11 by using port in macOS
+
+```
+sudo port install python311
+sudo port install py311-pip
+## The python3 and pip will be installed in /opt/local/bin/
+
+sudo port install mysql8
+sudo port install py311-mysqlclient # This is version 2.2.1
+```
+
 
 
 ## Codebase
@@ -29,13 +40,27 @@ sudo apt install python3.11
 - MS SQL Server
 ### 2.4 Setup the Dev Environment
 ```shell
+## Install venv engine
 pip3 install pipenv
+
+## Create a folder
+mkdir storeFront
+cd storeFront
+
+## create venv while installing django
+pipenv install django --python 3.12
+## or classic python3 module
+## python3 -m venv .venv
+
+## install more modules
+pipenv install django-debug-toolbar mysqlclient==2.1.1
+
+## Activate the venv
+pipenv shell
+## source .venv/bin/activate
 ```
 ### 2.5 Create the first Django project
 ```shell
-mkdir storeFront
-cd storeFront
-pip3 install django
 ```
 
 ### 4.3 Migration of SQLite
