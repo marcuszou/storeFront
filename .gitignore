@@ -1,0 +1,11 @@
+.venv/
+playground/__pycache__/
+playground/migrations/
+store/__pycache__/
+store/migrations/
+tags/__pycache__/
+tags/migrations/
+storefront/__pycache__/
+storefront/migrations/
+likes/__pycache__/
+likes/migrations/

@@ -4,7 +4,7 @@
 
 ## Tech Stack
 
-1. Python: 3.12.7 (download the installer for macOS Sonoma while Ubuntu 24.04 has python 3.12.6)
+1. Python: 3.12.7 (download the installer for macOS Sonoma while Ubuntu 24.04 has python 3.12.3)
 2. Django: 5.1.3
 
 In case of someones wanting to have Python 3.11 in Ubuntu 24.04, here is the How-to:
